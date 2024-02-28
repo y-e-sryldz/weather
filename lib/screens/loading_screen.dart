@@ -53,19 +53,30 @@ class _LoadingScreenState extends State<LoadingScreen> {
   }
 
   @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: Container(
-        decoration: BoxDecoration(
-            gradient: LinearGradient(
-                begin: Alignment.topLeft,
-                end: Alignment.bottomRight,
-                colors: [Colors.purple, Colors.blue])),
-        child: Center(
-          child: SpinKitFadingCircle(
-            color: Colors.white,
-            size: 150,
-            duration: Duration(milliseconds: 1200),
+Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        body: Center(
+          child: Stack(
+            alignment: Alignment.center,
+            children: <Widget>[
+              // Arkaya yerleştirilecek resim
+              Image.asset(
+                'assets/giris.jpeg',
+                fit: BoxFit.cover,
+                width: double.infinity,
+                height: double.infinity,
+              ),
+              Center(
+                child: Positioned(
+                  child: SpinKitFadingCube(
+                    color: Colors.white,
+                    size: 50,
+                    duration: Duration(milliseconds: 1200),
+                  ),
+                ),
+              ),
+            ],
           ),
         ),
       ),

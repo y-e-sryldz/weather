@@ -52,7 +52,7 @@ class WeatherData {
             size: 75,
             color: Colors.white,
           ),
-          weatherImage: AssetImage('assets/bulutlu.webp'));
+          weatherImage: AssetImage('assets/bulutlu.jpeg'));
     } else {
       //hava iyi
       //gece gündüz kontrolü
@@ -64,7 +64,7 @@ class WeatherData {
               size: 75,
               color: Colors.white,
             ),
-            weatherImage: AssetImage('assets/gece.jpg'));
+            weatherImage: AssetImage('assets/gece.jpeg'));
       } else {
         return WeatherDisplayData(
             weatherIcon: Icon(
